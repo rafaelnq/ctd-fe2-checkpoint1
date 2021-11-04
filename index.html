@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Checkpoint 1</title>
+  </head>
+  <body>
+    <div class="modal js-modal">
+      <form class="js-formulario">
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" required />
+        </div>
+        <div>
+          <label for="animal">Animal</label>
+          <input type="text" id="animal" required />
+        </div>
+        <div>
+          <label for="imagem">URL da Imagem</label>
+          <input type="text" id="imagem" required />
+        </div>
+        <div>
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao"></textarea>
+        </div>
+        <button type="submit" class="botao-add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="app">
+      <div>
+        <h1>Animais</h1>
+        <ul class="lista js-lista">
+          <!-- Conteúdo gerado dinamicamente com JS -->
+        </ul>
+        <button class="botao-add js-botao-add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+          </svg>
+        </button>
+      </div>
+      <div class="js-detalhes">
+        <!-- Conteúdo gerado dinamicamente com JS -->
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
