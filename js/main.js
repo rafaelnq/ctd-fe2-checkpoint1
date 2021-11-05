@@ -7,6 +7,7 @@ const campoNome = formulario.elements.nome;
 const campoAnimal = formulario.elements.animal;
 const campoImagem = formulario.elements.imagem;
 const campoDescricao = formulario.elements.descricao;
+const cards = document.querySelector('.js-cards');
 
 const state = {
   animais: [
@@ -72,9 +73,26 @@ function templateDetalhes() {
   `;
 }
 
+function templateCards() {
+  if (state.animais.length === 0) return '';
+  return state.animais
+    .map(
+      (animal) => `
+        <div class="animal-detalhes">
+          <img src="${animal.imagem}" />
+          <div>
+            <h3>${animal.nome} <span> - ${animal.animal}</span></h3>
+            <p>${animal.descricao}</p>
+          </div>
+        </div>`
+    )
+    .join('');
+}
+
 function render() {
   lista.innerHTML = templatePreview();
   detalhes.innerHTML = templateDetalhes();
+  cards.innerHTML = templateCards();
 }
 
 document.addEventListener('DOMContentLoaded', render);
