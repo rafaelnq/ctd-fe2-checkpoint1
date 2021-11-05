@@ -15,21 +15,24 @@ const state = {
       nome: 'Tom',
       animal: 'Gato',
       imagem: 'https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg',
-      descricao: 'Apenas uma descrição para teste. TODO: Trocar.',
+      descricao:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum, urna quis venenatis dapibus, dui nulla ornare est, ac molestie massa arcu ac enim.',
     },
     {
       id: 2,
       nome: 'Bob',
       animal: 'Cachorro',
       imagem: 'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg',
-      descricao: 'Apenas uma descrição para teste. TODO: Trocar.',
+      descricao:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque elit et lacus tempor, at interdum nunc condimentum. Sed eget neque interdum, interdum magna eu, pharetra leo.',
     },
     {
       id: 3,
       nome: 'Castanha',
       animal: 'Hamster',
       imagem: 'https://cdn.pixabay.com/photo/2018/12/16/16/48/hamster-3878853_960_720.jpg',
-      descricao: 'Apenas uma descrição para teste. TODO: Trocar.',
+      descricao:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lectus lectus, malesuada eget ligula non, sollicitudin rhoncus augue. Vestibulum posuere convallis nunc. Maecenas a enim et dui dapibus nam.',
     },
   ],
   animalSelecionado: 1,
@@ -61,9 +64,10 @@ function templateDetalhes() {
   return `
     <div class="animal-detalhes">
       <img src="${animal.imagem}" />
-      <h3>${animal.nome}</h3>
-      <p>${animal.animal}</p>
-      <p>${animal.descricao}</p>
+      <div>
+        <h3>${animal.nome} <span> - ${animal.animal}</span></h3>
+        <p>${animal.descricao}</p>
+      </div>
     </div>
   `;
 }
